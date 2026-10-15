@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Family Vibe — a smart wellness assistant for families. SDG 3, Year of the Family, Dubai UAE." />
+    <title>Family Vibe</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+    <div class="app-card">
+
+        <header class="header-row">
+            <div class="title-block">
+                <h1>
+                    FAMILY VIBE
+                    <span>assistant</span>
+                </h1>
+                <div class="sdg-tag">
+                    <span class="dot"></span> SDG 3 · Good Health &amp; Well-being
+                </div>
+            </div>
+            <div class="family-badge">
+                Year of the Family · Dubai, UAE
+            </div>
+        </header>
+
+        <section class="problem-note">
+            <p>
+                <strong>real talk:</strong> between work, school, screens, and everything else,
+                families are losing quality time. we built this to help you plan, track, and
+                actually vibe together. no over-engineering, just useful.
+            </p>
+            <div class="challenge-tag">young tech innovators challenge</div>
+        </section>
+
+        <main class="dashboard">
+
+            <section class="panel" id="planPanel">
+                <h2><span class="marker marker-plan"></span> plan activities</h2>
+                <div class="activity-list" id="activityList">
+                    <div class="activity-item">
+                        <input type="checkbox" id="act1" checked />
+                        <label for="act1">family walk / park time</label>
+                        <span class="time-badge">30 min</span>
+                    </div>
+                    <div class="activity-item">
+                        <input type="checkbox" id="act2" />
+                        <label for="act2">cook a healthy meal together</label>
+                        <span class="time-badge">45 min</span>
+                    </div>
+                    <div class="activity-item">
+                        <input type="checkbox" id="act3" />
+                        <label for="act3">10 min family stretch / yoga</label>
+                        <span class="time-badge">10 min</span>
+                    </div>
+                    <div class="activity-item">
+                        <input type="checkbox" id="act4" />
+                        <label for="act4">screen-free dinner chat</label>
+                        <span class="time-badge">30 min</span>
+                    </div>
+                </div>
+                <button class="btn" id="addActivityBtn">add random activity</button>
+            </section>
+
+            <section class="panel" id="habitPanel">
+                <h2><span class="marker marker-habit"></span> healthy habits</h2>
+                <div class="habit-grid" id="habitGrid">
+
+                    <div class="habit-row" data-habit="water" data-value="3">
+                        <div class="habit-info">
+                            <span class="habit-name">water (glasses)</span>
+                        </div>
+                        <div class="progress-ring">
+                            <div class="bar"><div class="bar-fill"></div></div>
+                            <button class="habit-btn" data-action="plus">+</button>
+                            <button class="habit-btn" data-action="minus">-</button>
+                        </div>
+                    </div>
+
+                    <div class="habit-row" data-habit="veggies" data-value="2">
+                        <div class="habit-info">
+                            <span class="habit-name">veggies / fruits</span>
+                        </div>
+                        <div class="progress-ring">
+                            <div class="bar"><div class="bar-fill"></div></div>
+                            <button class="habit-btn" data-action="plus">+</button>
+                            <button class="habit-btn" data-action="minus">-</button>
+                        </div>
+                    </div>
+
+                    <div class="habit-row" data-habit="move" data-value="2">
+                        <div class="habit-info">
+                            <span class="habit-name">move (30 min)</span>
+                        </div>
+                        <div class="progress-ring">
+                            <div class="bar"><div class="bar-fill"></div></div>
+                            <button class="habit-btn" data-action="plus">+</button>
+                            <button class="habit-btn" data-action="minus">-</button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="habit-actions">
+                    <button class="btn btn-secondary" id="resetHabitsBtn">reset habits</button>
+                </div>
+            </section>
+
+            <section class="panel" id="qualityPanel">
+                <h2><span class="marker marker-time"></span> quality time</h2>
+                <div class="opp-list" id="oppList">
+                    <div class="opp-item">
+                        <div class="opp-text"><strong>tonight:</strong> stargaze on the balcony or rooftop</div>
+                    </div>
+                    <div class="opp-item">
+                        <div class="opp-text"><strong>this weekend:</strong> board game tournament</div>
+                    </div>
+                    <div class="opp-item">
+                        <div class="opp-text"><strong>any day:</strong> read a book out loud together</div>
+                    </div>
+                </div>
+                <button class="btn" id="newIdeaBtn">discover new idea</button>
+            </section>
+
+        </main>
+
+        <footer class="footer-message">
+            <p>family wellness = small habits + real connection</p>
+            <p>
+                <span class="highlight">#SDG3</span>
+                <span>#YearOfTheFamily</span>
+                <span>UAE</span>
+            </p>
+        </footer>
+    </div>
+
+    <script src="js/habits.js"></script>
+    <script src="js/activities.js"></script>
+    <script src="js/qualitytime.js"></script>
+</body>
+</html>

@@ -1,0 +1,410 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(145deg, #f9f2e7 0%, #ffe9d6 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    color: #2e2b26;
+}
+
+.app-card {
+    max-width: 1300px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 3.5rem 3.5rem 2.5rem 2.5rem;
+    box-shadow: 0 30px 45px -20px rgba(0, 0, 0, 0.25),
+                0 0 0 2px rgba(255, 245, 235, 0.7) inset;
+    padding: 2.5rem 2.2rem 2.8rem;
+    border: 1px solid #fff9f0;
+}
+
+/* ---------- header ---------- */
+.header-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.title-block h1 {
+    font-size: 2.6rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: #2e2b26;
+    line-height: 1.1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.title-block h1 span {
+    background: #ffd966;
+    padding: 0.15rem 1rem 0.25rem 1rem;
+    border-radius: 60px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #4a3b1f;
+    letter-spacing: 0.3px;
+    box-shadow: 0 4px 0 #c9a13b;
+    transform: rotate(-1.5deg);
+    display: inline-block;
+    text-transform: lowercase;
+}
+
+.sdg-tag {
+    background: #2e7d5e;
+    color: #f0fff4;
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 6px 0 #1b4e3a;
+    margin-top: 0.6rem;
+}
+
+.sdg-tag .dot {
+    width: 8px;
+    height: 8px;
+    background: #f0fff4;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.family-badge {
+    background: #fbe9d2;
+    border-radius: 100px;
+    padding: 0.8rem 1.6rem;
+    font-weight: 600;
+    color: #7b5e3b;
+    border: 2px dashed #dbbd99;
+    transform: rotate(0.8deg);
+    font-size: 0.95rem;
+    box-shadow: 0 5px 0 #e7d3bd;
+}
+
+/* ---------- problem note ---------- */
+.problem-note {
+    background: #fff6e6;
+    border-left: 12px solid #fdbe5c;
+    padding: 1.4rem 1.8rem;
+    border-radius: 30px 30px 30px 10px;
+    margin-bottom: 2.2rem;
+    box-shadow: 0 8px 0 #e6d3bd, 0 12px 25px -10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.problem-note p {
+    font-size: 1rem;
+    color: #3e362e;
+    max-width: 700px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.problem-note .challenge-tag {
+    background: #fceae3;
+    padding: 0.5rem 1.2rem;
+    border-radius: 40px;
+    font-weight: 700;
+    color: #a14d2b;
+    font-size: 0.8rem;
+    border: 1px solid #f3b79b;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ---------- dashboard ---------- */
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.8rem;
+    margin-bottom: 2.4rem;
+}
+
+.panel {
+    flex: 1 1 280px;
+    background: #ffffffd9;
+    backdrop-filter: blur(8px);
+    border-radius: 2.5rem;
+    padding: 1.8rem 1.6rem;
+    box-shadow: 0 12px 0 #e1cfbb, 0 18px 30px -12px rgba(0, 0, 0, 0.2);
+    border: 1px solid #fffcf5;
+    transition: transform 0.15s;
+}
+
+.panel:hover {
+    transform: translateY(-3px);
+}
+
+.panel h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #3b2f24;
+    border-bottom: 2px solid #f5dbbd;
+    padding-bottom: 0.75rem;
+    text-transform: lowercase;
+}
+
+.marker {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.marker-plan  { background: #ea9a5c; }
+.marker-habit { background: #81b29a; }
+.marker-time  { background: #c78bc9; }
+
+/* ---------- activities ---------- */
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.6rem;
+}
+
+.activity-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f9f1e8;
+    padding: 0.8rem 1.2rem;
+    border-radius: 50px;
+    font-weight: 500;
+    color: #2c241e;
+    border: 1px solid #eedac8;
+    box-shadow: 0 3px 0 #dcc9b6;
+}
+
+.activity-item input[type="checkbox"] {
+    width: 1.3rem;
+    height: 1.3rem;
+    accent-color: #ea9a5c;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.activity-item label {
+    flex: 1;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: opacity 0.2s;
+}
+
+.activity-item .time-badge {
+    background: #e7d8ca;
+    border-radius: 40px;
+    padding: 0.2rem 0.9rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #63513f;
+    white-space: nowrap;
+}
+
+/* ---------- habits ---------- */
+.habit-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    margin-bottom: 1.4rem;
+}
+
+.habit-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f9f1e8;
+    padding: 0.75rem 1.2rem;
+    border-radius: 40px;
+    border: 1px solid #ecdac8;
+    gap: 8px;
+}
+
+.habit-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.habit-name {
+    font-weight: 600;
+    color: #3e3229;
+    font-size: 0.92rem;
+}
+
+.progress-ring {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.progress-ring .bar {
+    width: 70px;
+    height: 10px;
+    background: #e3d5c8;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+    width: 0%;
+    background: #81b29a;
+    border-radius: 30px;
+    transition: width 0.3s ease;
+}
+
+.habit-btn {
+    background: #fff;
+    border: 1px solid #dcc9b6;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #63513f;
+    cursor: pointer;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.1s, background 0.15s;
+}
+
+.habit-btn:hover {
+    background: #f5e9dc;
+}
+
+.habit-btn:active {
+    transform: scale(0.88);
+}
+
+.habit-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0.4rem;
+}
+
+/* ---------- quality time ---------- */
+.opp-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    margin-bottom: 1.2rem;
+}
+
+.opp-item {
+    background: #f6e9dd;
+    border-radius: 24px;
+    padding: 0.9rem 1.1rem;
+    border: 2px dashed #dbbd99;
+    font-weight: 500;
+    color: #4d3e2f;
+}
+
+.opp-text {
+    font-size: 0.92rem;
+    line-height: 1.4;
+}
+
+.opp-text strong {
+    color: #ad6b3a;
+    font-weight: 700;
+}
+
+/* ---------- buttons ---------- */
+.btn {
+    background: #f3cba1;
+    border: 1px solid #ffe2c1;
+    padding: 0.75rem 1.4rem;
+    border-radius: 40px;
+    font-weight: 700;
+    color: #35281c;
+    box-shadow: 0 5px 0 #c9a77b;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    font-size: 0.88rem;
+    letter-spacing: 0.2px;
+    text-transform: lowercase;
+}
+
+.btn:hover {
+    background: #f5d3af;
+}
+
+.btn:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 #c9a77b;
+}
+
+.btn-secondary {
+    background: #e1e9dd;
+    box-shadow: 0 5px 0 #b5c2af;
+    color: #2e3b2b;
+    border-color: #d0ddca;
+}
+
+.btn-secondary:hover {
+    background: #e8efe5;
+}
+
+/* ---------- footer ---------- */
+.footer-message {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background: #fff1e0;
+    padding: 1rem 1.8rem;
+    border-radius: 50px;
+    box-shadow: 0 5px 0 #dbbd99;
+    border: 1px solid #f7e2cf;
+    margin-top: 0.4rem;
+}
+
+.footer-message p {
+    font-weight: 600;
+    color: #624c39;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.footer-message .highlight {
+    background: #fedba5;
+    padding: 0.15rem 0.85rem;
+    border-radius: 30px;
+    color: #3d2d1d;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
