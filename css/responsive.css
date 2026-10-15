@@ -1,0 +1,98 @@
+/* =========================================================
+   FAMILY VIBE — responsive
+   ========================================================= */
+
+@media (max-width: 750px) {
+    .app-card {
+        padding: 1.8rem 1.2rem;
+    }
+
+    .title-block h1 {
+        font-size: 1.9rem;
+    }
+
+    .title-block h1 span {
+        font-size: 0.9rem;
+        padding: 0.1rem 0.8rem;
+    }
+
+    .problem-note {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .family-badge {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+    }
+
+    .dashboard {
+        gap: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 0.8rem;
+    }
+
+    .app-card {
+        padding: 1.4rem 1rem;
+        border-radius: 2rem;
+    }
+
+    .panel {
+        padding: 1.3rem;
+        border-radius: 1.8rem;
+    }
+
+    .panel h2 {
+        font-size: 1.15rem;
+    }
+
+    .activity-item {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .habit-row {
+        flex-wrap: wrap;
+    }
+
+    .habit-info {
+        width: 100%;
+    }
+
+    .progress-ring {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .footer-message {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .footer-message p {
+        justify-content: center;
+        font-size: 0.82rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .title-block h1 {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .habit-btn {
+        width: 22px;
+        height: 22px;
+        font-size: 0.9rem;
+    }
+}
